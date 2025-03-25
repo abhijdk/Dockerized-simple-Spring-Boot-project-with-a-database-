@@ -4,8 +4,7 @@
    - ✅ Spring Web
    - ✅ Spring Data JPA
    - ✅ MySQL Driver
->wre
-> dfas
+
 2. **Configure `application.properties`:**
 
                            ```properties
