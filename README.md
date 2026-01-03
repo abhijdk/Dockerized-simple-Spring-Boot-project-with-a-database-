@@ -81,9 +81,9 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
    ```dockerfile
    FROM eclipse-temurin:21-jdk
-WORKDIR /app
-COPY target/sb_with_db.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+   WORKDIR /app
+   COPY target/sb_with_db.jar app.jar
+   ENTRYPOINT ["java", "-jar", "app.jar"]
 
    ```
 
