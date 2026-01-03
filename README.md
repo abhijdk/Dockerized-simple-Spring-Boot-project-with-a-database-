@@ -60,7 +60,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
 ---
 
-## 📦 **Step 2: Create the Dockerfile**
+## 📦 **Step 2A: [Old Approach] Create the Dockerfile**
 
 1. **Add a `Dockerfile` in your project root:**
 
@@ -69,6 +69,22 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
    COPY target/sb_with_db.jar /do/app/
    WORKDIR /do/app
    ENTRYPOINT ["java", "-jar", "sb_with_db.jar"]
+   ```
+
+---
+
+---
+
+## 📦 **Step 2B: [Latest Version] Create the Dockerfile**
+
+1. **Add a `Dockerfile` in your project root:**
+
+   ```dockerfile
+   FROM eclipse-temurin:21-jdk
+WORKDIR /app
+COPY target/sb_with_db.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
    ```
 
 ---
